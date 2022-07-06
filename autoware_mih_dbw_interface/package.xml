@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>autoware_mih_dbw_interface</name>
+  <version>0.1.0</version>
+  <description>The autoware_mih_dbw_interface package</description>
+  <maintainer email="todo@gmail.com">TBD</maintainer>
+  <author email="takamasa.horibe@tier4.jp">Takamasa Horibe</author>
+  <license>TBD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>mih_dbw_api_msgs</depend>
+  <depend>autoware_auto_msgs</depend>
+
+  <test_depend>ament_cmake_ros</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
