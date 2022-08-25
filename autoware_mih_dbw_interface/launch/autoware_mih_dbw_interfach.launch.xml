@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="autoware_mih_dbw_interface" exec="autoware_mih_dbw_interface_node" name="autoware_mih_dbw_interface_node" output="screen">
+    <!-- from/to Autoware -->
+    <remap from="~/input/control_command" to="/control/command/control_cmd"/>
+    <remap from="~/output/steering" to="/vehicle/status/steering_status"/>
+    <remap from="~/output/velocity" to="/vehicle/status/velocity_status"/>
+
+    <!-- from/to MIH DBW IF -->
+    <remap from="~/input/odometry" to="/odometry_from_mih"/>
+    <remap from="~/output/high_level_control_command" to="/high_level_control_command_to_mih"/>
+    <remap from="~/output/vehicle_control_command" to="/vehicle_control_command_to_mih"/>
+  </node>
+</launch>
