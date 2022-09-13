@@ -1,5 +1,7 @@
 # autoware-mih-dbw-interface
 
+![dbw_api_architecture](./docs/media/dbw_api_architecture.png)
+
 This repository provides functions for Autoware to work with vehicles compliant with the MIH DBW API and the underlying [MIH EVKit](https://developer.mih-ev.org/) software stack for software defined vehicles.
 
 ## Background
