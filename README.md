@@ -10,11 +10,7 @@ The MIH DBW API is designed by the MIH Autonomy working group to provide command
 
 By publishing and/or subscribing to the appropriate topics for these interfaces, developers will be able to create mission critical software that can control the acceleration, deceleration and turning angle of vehicles for AD or ADAS systems.
 
-Further information about MIH's working groups can be found below:
-
-![mih_wg_focus](./docs/media/mih_wg_forcus.png)
-
-![evkit_schedule](./docs/media/evkit_schedule.png)
+Further information about MIH's working groups can be found at the [MIH homepage](https://www.mih-ev.org/en/groups/?page_name=WorkingGroups).
 
 
 ## How to use
@@ -42,10 +38,10 @@ The command interfaces provide programmable interfaces to interact with the vehi
     - Desired acceleration / deceleration rate in m/s2
     - float32
   - front_wheel_angle
-    - Desired front wheel turning radius.
+    - Desired front wheel turning radius
     - float32
   - rear_wheel_angle
-    - Desired rear wheel turning radius.
+    - Desired rear wheel turning radius
     - float32
   - front_wheel_angle_rotation_rate
     - Desired front wheel rotation rate
@@ -67,7 +63,7 @@ The command interfaces provide programmable interfaces to interact with the vehi
 - The HighLevelControlCommand interface should send at a rate of 40Hz minimum.
 - The HighLevelControlCommand interface consists of the following data fields:
   - stamp
-    - Timestamp value in nanoseconds or the unit defined by the system.
+    - Timestamp value in nanoseconds or the unit defined by the system
     - velocity
   - Desired vehicle speed in m/s
     - float32
