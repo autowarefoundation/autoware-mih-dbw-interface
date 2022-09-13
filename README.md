@@ -4,7 +4,7 @@ This repository provides functions for Autoware to work with vehicles compliant 
 
 ## Background
 
-The MIH DBW API is designed by the MIH Autonomy working group to provide command interfaces to interact with the vehicle's acceleration, deceleration, brake, and steering and report interfaces to provide feedback for the common platform states. Both sets of interfaces are based on Autoware.Auto's implementations for easy adaptation.
+The MIH DBW API is designed by the MIH Autonomy working group to provide command interfaces, to interact with the vehicle's acceleration, deceleration, brake and steering, and report interfaces to provide feedback for the common platform states. Both sets of interfaces are based on Autoware.Auto's implementations for easy adaptation.
 
 By publishing and/or subscribing to the appropriate topics for these interfaces, developers will be able to create mission critical software that can control the acceleration, deceleration and turning angle of vehicles for AD or ADAS systems.
 
