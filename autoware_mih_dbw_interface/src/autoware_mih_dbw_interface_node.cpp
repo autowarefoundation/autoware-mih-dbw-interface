@@ -23,20 +23,20 @@ AutowareMihDbwInterfaceNode::AutowareMihDbwInterfaceNode(const rclcpp::NodeOptio
 
   // Autoware
   sub_control_cmd_ = create_subscription<AW_AckermannControlCommand>(
-    "~/input/control_command", 1,
+    "/control/command/control_cmd", 1,
     std::bind(&AutowareMihDbwInterfaceNode::onAutowareControlCommand, this, _1));
   pub_steering_ =
-    create_publisher<autoware_auto_vehicle_msgs::msg::SteeringReport>("~/output/steering", 1);
+    create_publisher<autoware_auto_vehicle_msgs::msg::SteeringReport>("/vehicle/status/steering_status", 1);
   pub_velocity_ =
-    create_publisher<autoware_auto_vehicle_msgs::msg::VelocityReport>("~/output/velocity", 1);
+    create_publisher<autoware_auto_vehicle_msgs::msg::VelocityReport>("/vehicle/status/velocity_status", 1);
 
   // MIH
   sub_odometry_ = create_subscription<MIH_VehicleOdometry>(
-    "~/input/odometry", 1, std::bind(&AutowareMihDbwInterfaceNode::onMihOdometry, this, _1));
+    "/mih_dbw_interface/odometry", 1, std::bind(&AutowareMihDbwInterfaceNode::onMihOdometry, this, _1));
   pub_high_control_cmd_ =
-    create_publisher<MIH_HighLevelControlCommand>("~/output/high_level_control_command", 1);
+    create_publisher<MIH_HighLevelControlCommand>("/mih_dbw_interface/high_level_control_command", 1);
   pub_control_cmd_ =
-    create_publisher<MIH_VehicleControlCommand>("~/output/vehicle_control_command", 1);
+    create_publisher<MIH_VehicleControlCommand>("/mih_dbw_interface/vehicle_control_command", 1);
 }
 
 void AutowareMihDbwInterfaceNode::onMihOdometry(

@@ -90,6 +90,7 @@ AW_VelocityReport toAutowareVelocityMsg(const MIH_VehicleOdometry & mih_msg)
 {
   AW_VelocityReport aw_msg;
   aw_msg.header.frame_id = "base_link";
+  aw_msg.header.stamp = mih_msg.stamp;
   aw_msg.heading_rate = mih_msg.yaw_rate;
   aw_msg.lateral_velocity = 0.0;  // not supported
   aw_msg.longitudinal_velocity = mih_msg.velocity;
